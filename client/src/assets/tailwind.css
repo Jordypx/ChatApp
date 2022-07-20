@@ -18,28 +18,33 @@
 }
 
 body {
-   min-height: 100vh;
+   overflow: hidden; 
 }
 
 .container {
-   width: 100% ;
-   height: calc(100vh - 40px);
+   max-width: 100%;
+     /* height: calc(100vh - 40px);  */
+   height: 100%;
 }
 
 
 .container .left {
    flex: 30%;
-   height: 100vh
+   height: 100vh;
+}
+
+.search-input {
+   border: 0;
+   outline: 0;
 }
 
 .chatlist {
-   height: calc(100% - 10px);
+   height: 100%;
    overflow-y: auto;
 }
 
 .container .right {
    flex: 70%;
-   height: 100%;
 }
 
 .chatbox {
@@ -47,11 +52,10 @@ body {
    background-repeat: no-repeat;
    background-size: 100%;
    background-color: white;
-   height: 100vh;
-
-   overflow-y: auto;
+   overflow-y: scroll;
    padding: 50px;
    position: relative;
+   height: 72.2vh;
 }
 
 
@@ -70,13 +74,44 @@ body {
     font-size: 1.2em;
 }
 
-/* .message .my_message p::before {
-   content: '';
-   position: absolute;
-   width: 1.25rem;
-   height: 1.25rem;
-   background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
-} */
+.message .my_message p::before {
+   content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+   left: 28px;
+	right: auto;
+   top: 9.4rem;
+	bottom: auto;
+	border: 22px solid;
+	border-color: white transparent transparent transparent;
+}
+
+.message .frnd_message p::after {
+   content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+   left: auto;
+	right: 28px;
+   top: 4.1rem;
+	bottom: auto;
+	border: 22px solid;
+	border-color: #dcf8c6 transparent transparent transparent;
+}
+
+.message .frnd_message p::before {
+   content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+   left: auto;
+	right: 28px;
+   top: 4.1rem;
+	bottom: auto;
+	border: 22px solid;
+	border-color: #dcf8c6 transparent transparent transparent;
+}
 
 .my_message {
    justify-content: flex-end;
@@ -105,3 +140,38 @@ body {
    margin-top: 1.5rem;
    margin-left: 0.8rem;
 }
+
+/* .talk-bubble {
+	margin: 40px;
+   display: inline-block;
+   position: relative;
+	width: 200px;
+	height: auto;
+	background-color: lightyellow;
+}
+
+/* Right triangle placed top left flush. */
+/* .tri-right.border.left-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 0px;
+	bottom: auto;
+	border: 22px solid;
+	border-color: lightyellow transparent transparent transparent;
+} */

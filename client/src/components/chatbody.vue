@@ -9,7 +9,7 @@
 </div>
 
 
-  <div class="container flex max-w-full bg-white shadow">
+  <div class="container flex bg-white shadow">
        
     <!-- left_side -->
 
@@ -34,7 +34,7 @@
                
                 <div class="w-full flex justify-center items-center border-b-2">
 
-                  <input class="w-full bg-gray-200 h-16 rounded-xl text-xl pl-16 m-4 outline-0 border-0" type="text" placeholder="Search or start new chat">
+                  <input class="search-input w-full bg-gray-200 h-16 rounded-xl text-xl pl-16 m-4 outline-0 border-0" type="text" placeholder="Search or start new chat">
 
                    <div><img class="w-7 absolute left-8 bottom-8" src="../assets/NicePng_magnifying-glass-png-no_659698.png" alt=""></div>
                
@@ -95,23 +95,29 @@
            <!-- chat-box -->
 
        <div class="chatbox w-full">
-                  <div class="message my_message flex w-full" v-for="message in messages" :key="message.id">
-                     <div class="message my_message flex w-full" v-if="message.id % 2 == 0">
-                        <p class="">{{ message.message}}</p>
+                 <div class="message my_message flex w-full" v-for="message in messages" :key="message.id">
+                      <div class="message my_message flex w-full" v-if="message.id % 2 == 0">
+                        <p class="">{{ message.message }}</p>
                      </div>
 
-                  <div class="message frnd_message flex w-full" v-else>
-                      <p class="message bot"> {{ message.message}}</p>
-                  </div>
-               </div>
+                     <!-- <div class="talk-bubble tri-right left-top" v-if="message.id % 2 == 0">
+                             <p>{{ message.message }}</p>
+                     </div> -->
 
-                 
+                  <div class="message frnd_message flex w-full" v-else>
+                      <p class=""> {{ message.message }}</p>
+                  </div>
+
+                  <!-- <div class="talk-bubble tri-right left-top" v-else>
+                        <p>{{ message.message }}</p>
+                  </div>
+                   -->
+                 </div>
                </div>
 
 
           <!-- chat input -->
-
-               <div class="input-chat flex w-full p-1 justify-around items-center bg-gray-100 ">
+          <div class="input-chat flex w-full p-1 justify-around items-center bg-gray-100 ">
                   <div class="smile-img pl-9">
 
                      <img class="w-11  cursor-pointer" src="../assets/emoticon-24-256.png" alt="">
@@ -140,6 +146,8 @@
                   </div> -->
 
                </div>
+
+               
      </div>
 
   </div>
