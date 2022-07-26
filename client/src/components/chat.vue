@@ -1,8 +1,8 @@
 <template>
 
-<div>
+<!-- <div>
   <preloader/>
-</div>
+</div> -->
 
 <div>
   <chatbody/>
@@ -15,7 +15,7 @@
 
 
 <script>
-import preloader from '../components/preloader.vue'
+// import preloader from '../components/preloader.vue'
 import chatbody from '../components/chatbody.vue'
 
 
@@ -23,7 +23,7 @@ export default {
    name: "chat",
 
    components: {
-    preloader,
+    // preloader,
     chatbody,
    }
 

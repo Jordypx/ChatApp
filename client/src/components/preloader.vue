@@ -5,7 +5,9 @@
    </div>
 </transition>
 
-<div></div>
+<div> 
+    <chatbody/>
+</div>
 
 </template>
 
@@ -13,6 +15,9 @@
 
 
 <script>
+// import chat from "../components/chat.vue"
+import chatbody from '../components/chatbody.vue'
+
 export default {
    name: 'preloader',
    data() {
@@ -29,7 +34,11 @@ export default {
                this.show = false
          }, 6000)
       }
-   }
+   },
+
+  components: {
+    chatbody,
+  },
    
 }
 </script>

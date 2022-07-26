@@ -23,7 +23,8 @@
 
 
 <div v-else>
-   <chat/>
+   <!-- <chat/> -->
+    <preloader/>
 </div>
 
 </template>
@@ -31,7 +32,8 @@
 <script>
 // import db from './db'  
 import { reactive, ref} from 'vue';
-import chat from "../components/chat.vue"
+// import chat from "../components/chat.vue"
+import preloader from '../components/preloader.vue'
 
 
 export default {
@@ -60,7 +62,8 @@ export default {
   },
 
   components: {
-   chat,
+   // chat,
+   preloader,
   },
 
 }
